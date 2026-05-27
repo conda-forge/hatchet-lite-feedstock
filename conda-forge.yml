@@ -1,4 +1,10 @@
 conda_build_tool: rattler-build
+conda_install_tool: pixi
+bot:
+  automerge: true
+provider:
+  linux_aarch64: default
+  osx_arm64: default
 github:
   branch_name: main
   tooling_branch_name: main
