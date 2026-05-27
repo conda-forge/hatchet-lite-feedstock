@@ -15,26 +15,25 @@ source:
 
 build:
   number: 0
-  script:
-    - cd src/cmd/hatchet-lite
-    - go-licenses save . --save_path ../../../library_licenses --ignore github.com/mattn/go-localereader
-    - if: unix
-      then: go build -v -o $PREFIX/bin/hatchet-lite -ldflags="-s -w"
-      else: go build -v -o %LIBRARY_BIN%\hatchet-lite.exe -ldflags="-s -w"
+  skip: win
 
 requirements:
   build:
     - ${{ compiler("go-nocgo") }}
     - go-licenses
+    - nodejs 22.*
+    - pnpm
+    - python 3.13.*
 
 tests:
   - script:
+      - echo "$LITE_STATIC_ASSET_DIR"
+      - test -d "$LITE_STATIC_ASSET_DIR"
       - hatchet-lite --help
       - hatchet-lite --version
   - package_contents:
       bin:
         - hatchet-lite
-      strict: true
 
 about:
   homepage: https://hatchet.run
