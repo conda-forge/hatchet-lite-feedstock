@@ -4,6 +4,8 @@ setlocal enabledelayedexpansion
 pushd "%SRC_DIR%\src\frontend\app"
 if errorlevel 1 exit /b 1
 
+dir
+
 pnpm install --frozen-lockfile
 if errorlevel 1 exit /b 1
 pnpm store prune
