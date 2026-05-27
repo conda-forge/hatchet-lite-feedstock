@@ -6,7 +6,7 @@ if errorlevel 1 exit /b 1
 
 dir
 
-pnpm install --frozen-lockfile
+pnpm install --frozen-lockfile --ignore-workspace
 if errorlevel 1 exit /b 1
 pnpm store prune
 if errorlevel 1 exit /b 1
