@@ -22,7 +22,7 @@ requirements:
     - go-licenses
     - nodejs 22.*
     - pnpm
-    - python
+    - python 3.13.*
 
 tests:
   - script:
