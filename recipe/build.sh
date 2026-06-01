@@ -14,4 +14,4 @@ echo "{\"LITE_STATIC_ASSET_DIR\": \"$PREFIX/share/hatchet/static-assets\"}" > $P
 
 pushd $SRC_DIR/src/cmd/hatchet-lite
 go-licenses save . --save_path "$SRC_DIR/library_licenses" --ignore github.com/mattn/go-localereader
-go build -v -o $PREFIX/bin/hatchet-lite -ldflags="-s -w"
+go build -v -o $PREFIX/bin/hatchet-lite -ldflags="-s -w -X 'main.Version=${PKG_VERSION}'"
