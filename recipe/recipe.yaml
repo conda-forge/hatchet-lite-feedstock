@@ -1,5 +1,5 @@
 context:
-  version: "0.87.14"
+  version: "0.88.0"
 
 package:
   name: hatchet-lite
@@ -7,14 +7,14 @@ package:
 
 source:
   - url: https://github.com/hatchet-dev/hatchet/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: d3876fb52b2af04af14e0c85ea41faec1e20655b3ddfe46121c270161aaaa3aa
+    sha256: cdb01ae9c6c355f0426962f07bd61a10d82be5b2af9869dd9d143cc1a3b1a50b
     target_directory: src
   - url: https://raw.githubusercontent.com/mattn/go-localereader/6bae6c923850ab5e0da9f36f69811ffe17064228/LICENSE
     sha256: dceede03550621e65ec7b79fcba87cf6dbb9d31132a8ae71a8fe8ceec0af7da3
     file_name: LICENSE-go-localereader
 
 build:
-  number: 1
+  number: 0
   skip: win
 
 requirements:
