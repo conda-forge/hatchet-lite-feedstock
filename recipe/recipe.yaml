@@ -1,5 +1,5 @@
 context:
-  version: "0.121.1"
+  version: "0.121.2"
 
 package:
   name: hatchet-lite
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/hatchet-dev/hatchet/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: fdaf678f346f5f03c8ec3a2d237254d10e572ab23a736bfb85c5da997cef78d9
+    sha256: 1552567c8319d20add90135d2a9f5e1ac23347455c08d58b3efbcd30c7b7f129
     target_directory: src
   - url: https://raw.githubusercontent.com/mattn/go-localereader/6bae6c923850ab5e0da9f36f69811ffe17064228/LICENSE
     sha256: dceede03550621e65ec7b79fcba87cf6dbb9d31132a8ae71a8fe8ceec0af7da3
